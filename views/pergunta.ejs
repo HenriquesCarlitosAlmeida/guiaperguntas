@@ -8,8 +8,15 @@
             <p>Nenhuma descricao</p>
         <% }else{ %>
         <p><%= pergunta.descricao %></p>
-        <% } %>
+        <% }%>
         <hr>
+        <form action="">
+            <h3>Responda</h3>
+            <label for="">Responder:</label>
+            <textarea name="corpo" id="" cols="20" rows="4" class="form-control" placeholder="Digite a sua resposta"></textarea><br>
+            <input type="hidden" class="form-control" name="pergunta" id="" value="<%= pergunta.id %>">
+            <button class="btn btn-primary">Responder</button>
+        </form>
     </div>
 </body>
 <%- include ('partials/footer.ejs') %>
