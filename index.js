@@ -54,12 +54,18 @@ app.get("/pergunta/:id",(req,res)=>{
         }
     }).then(pergunta => {
         if(pergunta != undefined){ //A PERGUNTA FOI ENCONTRADA
-
-            // res.send("retorno")
-            // console.log(pergunta); 
-            res.render("pergunta",{
-                pergunta:pergunta
-            });
+            Resposta.findAll({
+                where:{perguntaId:pergunta.id},
+                order:[
+                        ['id','DESC']
+                      ]
+            }).then(respostas=>{
+                res.render("pergunta",{
+                    pergunta:pergunta,
+                    respostas: respostas
+                });
+            })
+            
         }else{ // A PERGUNTA NAO FOI ACHADA RETORNANDO UM NULO OU UNDEFINED
             res.redirect("/");
         }
