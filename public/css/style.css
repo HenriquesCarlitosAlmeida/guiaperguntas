@@ -5,3 +5,26 @@ body{
 #formulario-pergunta{
     margin-top: 5vh;
 }
+.pik{
+    border-radius: 3%;
+    background-color: black;
+}
+#bar ul{
+    list-style-type: none;
+    display: inline-block;
+}
+#bar li{display: inline;margin: 1.5em;width: 80px;transition: 0.7s ease-out;}
+#bar {position:absolute; top: 0;right: 45px;}
+#bar{margin-top: 3%;margin-right: 0.1%;}
+#bar a{
+    text-decoration: none;
+    color:#F00    ;
+    padding: 9px 20px;
+    border-right: 1px solid #fff;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+#bar a:hover{
+    background-color: #fff;
+    color: #333; 
+}

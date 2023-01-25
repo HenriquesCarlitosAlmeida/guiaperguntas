@@ -84,4 +84,8 @@ app.post("/responder",(req,res)=>{
     });
 });
 
+app.get("/carrossel",(req,res)=>{
+    res.render("carrossel");
+});
+
 app.listen(8080,()=>{console.log("APP rodando")});
